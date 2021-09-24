@@ -1,0 +1,28 @@
+@use '~@angular/material' as mat;
+@import "../../../styles/variables";
+
+@include mat.core();
+
+$tune-primary: mat.define-palette($aura-purple-pallete);
+$tune-accent: mat.define-palette($aura-green-pallete);
+$tune-theme: mat.define-light-theme((
+  color: (
+    primary: $tune-primary,
+    accent: $tune-accent
+  )
+));
+
+@include mat.all-component-themes($tune-theme);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: $accent0;
+}
+
+html, body { height: 100%; }
+
