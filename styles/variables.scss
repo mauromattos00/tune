@@ -1,0 +1,51 @@
+$accent0: #0f0f0f;
+$accent1: #9d7de0;
+$accent2: #67c9a8;
+$accent3: #d8c56f;
+$accent4: #9adf72;
+$accent5: #d46a6a;
+$accent6: #cf70bf;
+$accent7: #dbdbdb;
+$accent8: #6d6d6d;
+$accent31: #bcbd81;
+$accent32: #75b5c9;
+
+$aura-purple-pallete: (
+ 50: #DACEF3,
+ 100: #CDBDEF,
+ 200: #C1ADEB,
+ 300: #B49CE7,
+ 400: #A88CE3,
+ 500: #9D7DE0,
+ 600: #8159D7,
+ 700: #6636CE,
+ 800: #542AAE,
+ 900: #43228C,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   // ... continues to 900
+ )
+);
+
+$aura-green-pallete: (
+ 50: #D9F3CA,
+ 100: #CCEFB8,
+ 200: #C0EBA7,
+ 300: #B3E795,
+ 400: #A6E383,
+ 500: #9ADF72,
+ 600: #81D74F,
+ 700: #69CE2F,
+ 800: #58AB27,
+ 900: #46891F,
+ contrast: (
+   50: rgba(black, 0.87),
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   // ... continues to 900
+ )
+);
