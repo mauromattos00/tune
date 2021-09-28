@@ -1,31 +1,35 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { VideoPlayerService } from './services/video-player.service';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [AppComponent],
-    }).compileComponents();
+  let component: AppComponent;
+  let videoPlayerService: VideoPlayerService;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        AppComponent,
+        {
+          provide: VideoPlayerService,
+          useValue: {
+            randomizeVideo: () => null,
+          },
+        },
+      ],
+    });
+
+    component = TestBed.inject(AppComponent);
+    videoPlayerService = TestBed.inject(VideoPlayerService);
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'tune'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('tune');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome to tune!'
-    );
+  it('should randomize video', () => {
+    const spy = jest.spyOn(videoPlayerService, 'randomizeVideo');
+    component.randomizeVideo();
+    expect(spy).toHaveBeenCalled();
   });
 });
