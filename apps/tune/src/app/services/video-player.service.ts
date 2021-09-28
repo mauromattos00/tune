@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, interval, Subscription } from 'rxjs';
-import { filter, map, takeWhile } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs';
 
 import { videoIdList } from 'video-ids';
 
