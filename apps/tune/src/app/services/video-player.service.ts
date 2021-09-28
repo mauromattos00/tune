@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, interval, Subscription } from 'rxjs';
+import { filter, map, takeWhile } from 'rxjs/operators';
 
 import { videoIdList } from 'video-ids';
 
@@ -7,8 +8,11 @@ import { videoIdList } from 'video-ids';
   providedIn: 'root'
 })
 export class VideoPlayerService {
+  set player(player: YT.PlayerEvent) { this._player$.next(player); }
+  private readonly _player$ = new BehaviorSubject<YT.PlayerEvent | undefined>(undefined);
 
   get playerVars(): YT.PlayerVars | undefined { return this._playerVars$.value };
+  set playerVars(playerVars: YT.PlayerVars | undefined) { this._playerVars$.next(playerVars) }
   private readonly _playerVars$ = new BehaviorSubject<YT.PlayerVars | undefined>(undefined);
 
   get videoId(): string | undefined { return this._videoId$.value; }
@@ -35,5 +39,21 @@ export class VideoPlayerService {
     } while (newVideoId === this._videoId$.value);
 
     this._videoId$.next(newVideoId);
+  }
+
+  public handlePlayerStateChange(event: YT.OnStateChangeEvent) {
+    /**
+     * The UNSTARTED player state occurs when the user randomizes
+     * the video. To autoplay the video, the `playVideo` method is called.
+     */
+    if (event?.data === YT.PlayerState.UNSTARTED) {
+      event.target.playVideo();
+    }
+
+    this._player$.next(event);
+  }
+
+  public handleReadyState(player: YT.PlayerEvent) {
+    this._player$.next(player);
   }
 }
