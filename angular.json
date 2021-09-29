@@ -18,7 +18,10 @@
             "tsConfig": "apps/tune/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/tune/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "apps/tune/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
