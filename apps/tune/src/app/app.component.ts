@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VideoPlayerService } from './services/video-player.service';
+import { VideoPlayerService } from '@tune/video-player';
 
 @Component({
   selector: 'mauromattos00-root',
@@ -11,7 +11,7 @@ export class AppComponent {
   get videoId(): string | undefined { return this._videoPlayerService.videoId; }
   get playerVars(): YT.PlayerVars | undefined { return this._videoPlayerService.playerVars; }
 
-  constructor(private readonly _videoPlayerService: VideoPlayerService) {}
+  constructor(private _videoPlayerService: VideoPlayerService) {}
 
   public randomizeVideo() {
     this._videoPlayerService.randomizeVideo();

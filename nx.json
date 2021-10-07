@@ -33,6 +33,9 @@
     "tune-e2e": {
       "tags": [],
       "implicitDependencies": ["tune"]
+    },
+    "video-player": {
+      "tags": []
     }
   }
 }

@@ -18,9 +18,7 @@
             "tsConfig": "apps/tune/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
-            "styles": [
-              "apps/tune/src/styles.scss"
-            ],
+            "styles": ["apps/tune/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -116,6 +114,28 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/tune-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "video-player": {
+      "root": "libs/video-player",
+      "sourceRoot": "libs/video-player/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/video-player/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/video-player"],
+          "options": {
+            "jestConfig": "libs/video-player/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

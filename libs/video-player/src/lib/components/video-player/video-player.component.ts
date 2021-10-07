@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { VideoPlayerService } from '../services/video-player.service';
+import { VideoPlayerService } from '../../services/video-player.service';
 
 @Component({
   selector: 'mauromattos00-video-player',

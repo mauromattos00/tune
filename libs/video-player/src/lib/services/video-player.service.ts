@@ -3,9 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 
 import { videoIdList } from 'video-ids';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class VideoPlayerService {
   set player(player: YT.PlayerEvent) { this._player$.next(player); }
   private readonly _player$ = new BehaviorSubject<YT.PlayerEvent | undefined>(undefined);
