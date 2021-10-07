@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/tune",
             "index": "apps/tune/src/index.html",
@@ -17,8 +19,14 @@
             "polyfills": "apps/tune/src/polyfills.ts",
             "tsConfig": "apps/tune/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
-            "styles": ["apps/tune/src/styles.scss"],
+            "assets": [
+              "apps/tune/src/favicon.ico",
+              "apps/tune/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
+              "apps/tune/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,10 +91,15 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/tune"],
+          "outputs": [
+            "coverage/apps/tune"
+          ],
           "options": {
             "jestConfig": "apps/tune/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "styles": [
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css"
+            ]
           }
         }
       }
@@ -111,9 +124,13 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/tune-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/tune-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -125,14 +142,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/video-player/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/video-player/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/video-player"],
+          "outputs": [
+            "coverage/libs/video-player"
+          ],
           "options": {
             "jestConfig": "libs/video-player/jest.config.js",
             "passWithNoTests": true

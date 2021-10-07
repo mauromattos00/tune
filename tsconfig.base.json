@@ -18,5 +18,10 @@
       "@tune/video-player": ["libs/video-player/src/index.ts"]
     }
   },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
   "exclude": ["node_modules", "tmp"]
 }
