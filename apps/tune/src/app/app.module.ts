@@ -6,17 +6,18 @@ import { VideoPlayerModule } from '@tune/video-player';
 
 import { AppComponent } from './app.component';
 import { PoModule } from '@po-ui/ng-components';
-import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     VideoPlayerModule,
     PoModule,
     AppRoutingModule,
+    HomeModule,
   ],
   bootstrap: [AppComponent],
 })
