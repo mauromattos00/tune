@@ -1,0 +1,18 @@
+@import "../../../../../../../styles/variables";
+@import "../../../../../../../styles/mixins";
+
+.headings {
+  @include column-center;
+  color: $tune-white;
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: 0 2px 2px #666;
+  }
+
+  &__subtitle {
+    font-size: 1.3rem;
+  }
+}

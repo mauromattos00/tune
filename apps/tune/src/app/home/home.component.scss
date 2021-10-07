@@ -1,0 +1,9 @@
+@import "../../../../../styles/mixins.scss";
+
+.home {
+  @include column-center;
+}
+
+.video-player {
+  margin-bottom: 2rem;
+}

@@ -19,7 +19,7 @@
             "inlineStyleLanguage": "scss",
             "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
               "apps/tune/src/styles.scss"
             ],
             "scripts": []
@@ -89,7 +89,10 @@
           "outputs": ["coverage/apps/tune"],
           "options": {
             "jestConfig": "apps/tune/jest.config.js",
-            "passWithNoTests": true
+            "passWithNoTests": true,
+            "styles": [
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css"
+            ]
           }
         }
       }
@@ -117,6 +120,50 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/tune-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "tune-ui": {
+      "root": "libs/tune-ui",
+      "sourceRoot": "libs/tune-ui/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/tune-ui/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tune-ui"],
+          "options": {
+            "jestConfig": "libs/tune-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "video-player": {
+      "root": "libs/video-player",
+      "sourceRoot": "libs/video-player/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/video-player/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/video-player"],
+          "options": {
+            "jestConfig": "libs/video-player/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

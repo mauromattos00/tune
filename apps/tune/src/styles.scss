@@ -1,18 +1,4 @@
-@use '~@angular/material' as mat;
 @import "../../../styles/variables";
-
-@include mat.core();
-
-$tune-primary: mat.define-palette($aura-purple-pallete);
-$tune-accent: mat.define-palette($aura-green-pallete);
-$tune-theme: mat.define-light-theme((
-  color: (
-    primary: $tune-primary,
-    accent: $tune-accent
-  )
-));
-
-@include mat.all-component-themes($tune-theme);
 
 * {
   box-sizing: border-box;
@@ -20,8 +6,8 @@ $tune-theme: mat.define-light-theme((
 
 body {
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
-  background-color: $accent0;
+  font-family: 'Poppins', sans-serif;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  #00989b 0.1%, #005e78 94.2% );
 }
 
 html, body { height: 100%; }

@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-
-import { YouTubePlayerModule } from '@angular/youtube-player'
-
-import { AppComponent } from './app.component';
-import { VideoPlayerComponent } from './video-player/video-player.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { VideoPlayerModule } from '@tune/video-player';
+
+import { AppComponent } from './app.component';
+import { PoModule } from '@po-ui/ng-components';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home/home.module';
+
 @NgModule({
-  declarations: [AppComponent, VideoPlayerComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    YouTubePlayerModule,
-    MatButtonModule,
-    MatToolbarModule,
+    VideoPlayerModule,
+    PoModule,
+    AppRoutingModule,
+    HomeModule,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

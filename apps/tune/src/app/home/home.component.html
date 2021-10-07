@@ -1,0 +1,13 @@
+<main class="home">
+  <tune-headings></tune-headings>
+
+  <mauromattos00-video-player
+    [videoId]="videoId"
+    [width]="480"
+    [height]="640"
+    [playerVars]="playerVars"
+    class="video-player"
+  ></mauromattos00-video-player>
+
+  <tune-button (clicked)="randomizeVideo()">Randomizar</tune-button>
+</main>

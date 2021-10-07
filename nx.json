@@ -33,6 +33,12 @@
     "tune-e2e": {
       "tags": [],
       "implicitDependencies": ["tune"]
+    },
+    "tune-ui": {
+      "tags": []
+    },
+    "video-player": {
+      "tags": []
     }
   }
 }
