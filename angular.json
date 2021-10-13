@@ -97,7 +97,6 @@
             "jestConfig": "apps/tune/jest.config.js",
             "passWithNoTests": true,
             "styles": [
-              "./node_modules/@po-ui/style/css/po-theme-default.min.css"
             ]
           }
         }

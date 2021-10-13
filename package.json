@@ -22,7 +22,6 @@
     "@angular/router": "^12.2.0",
     "@angular/youtube-player": "^12.2.7",
     "@nrwl/angular": "12.9.0",
-    "@po-ui/ng-components": "^5.15.0",
     "@types/youtube-player": "^5.5.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
