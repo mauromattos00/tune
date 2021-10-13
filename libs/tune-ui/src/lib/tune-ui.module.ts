@@ -4,9 +4,7 @@ import { TuneButtonDirective } from './button/tune-button.directive';
 
 @NgModule({
   imports: [],
-  declarations: [
-    TuneButtonDirective
-  ],
+  declarations: [TuneButtonDirective],
   providers: [],
   exports: [TuneButtonDirective],
 })
