@@ -18,10 +18,16 @@
             "tsConfig": "apps/tune/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
-            "styles": ["apps/tune/src/styles.scss"],
+            "styles": [
+              "libs/tune-ui-styles/src/index.scss",
+              "apps/tune/src/styles.scss"
+            ],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": ["libs/tune-ui-styles/src/lib"]
+              "includePaths": [
+                "libs/tune-ui-styles/src/lib/components",
+                "libs/tune-ui-styles/src/lib/helpers"
+              ]
             }
           },
           "configurations": {
