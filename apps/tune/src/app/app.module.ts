@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VideoPlayerModule } from '@tune/video-player';
 
 import { AppComponent } from './app.component';
-import { PoModule } from '@po-ui/ng-components';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 
@@ -15,7 +14,6 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     BrowserAnimationsModule,
     VideoPlayerModule,
-    PoModule,
     AppRoutingModule,
     HomeModule,
   ],

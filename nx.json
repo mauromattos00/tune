@@ -37,6 +37,9 @@
     "tune-ui": {
       "tags": []
     },
+    "tune-ui-styles": {
+      "tags": []
+    },
     "video-player": {
       "tags": []
     }
