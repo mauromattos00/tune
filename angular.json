@@ -18,11 +18,11 @@
             "tsConfig": "apps/tune/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
-            "styles": [
-              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
-              "apps/tune/src/styles.scss"
-            ],
-            "scripts": []
+            "styles": ["apps/tune/src/styles.scss"],
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["libs/tune-ui-styles/src/lib"]
+            }
           },
           "configurations": {
             "production": {
@@ -141,6 +141,28 @@
           "outputs": ["coverage/libs/tune-ui"],
           "options": {
             "jestConfig": "libs/tune-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "tune-ui-styles": {
+      "root": "libs/tune-ui-styles",
+      "sourceRoot": "libs/tune-ui-styles/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/tune-ui-styles/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/tune-ui-styles"],
+          "options": {
+            "jestConfig": "libs/tune-ui-styles/jest.config.js",
             "passWithNoTests": true
           }
         }
