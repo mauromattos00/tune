@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { ButtonComponent } from './button/button.component';
+import { TuneButtonDirective } from './button/tune-button.directive';
 
 
 @NgModule({
   imports: [],
   declarations: [
-    ButtonComponent
+    TuneButtonDirective
   ],
   providers: [],
-  exports: [ButtonComponent],
+  exports: [TuneButtonDirective],
 })
 export class TuneUiModule { }

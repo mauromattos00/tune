@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ButtonType } from './button-type.enum';
 
 @Component({
   selector: 'tune-button',
@@ -7,7 +8,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ButtonComponent {
 
+  @Input('tuneButton') buttonType: ButtonType | '';
   @Output() clicked = new EventEmitter();
+
+  static readonly ButtonType: ButtonType;
 
   emitClick() {
     this.clicked.emit();
