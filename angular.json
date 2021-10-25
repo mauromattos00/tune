@@ -26,7 +26,8 @@
             "stylePreprocessorOptions": {
               "includePaths": [
                 "libs/tune-ui-styles/src/lib/components",
-                "libs/tune-ui-styles/src/lib/helpers"
+                "libs/tune-ui-styles/src/lib/helpers",
+                "libs/tune-ui-styles/src/lib/typography"
               ]
             }
           },
