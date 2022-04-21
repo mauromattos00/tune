@@ -7,9 +7,7 @@ describe('VideoPlayerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        VideoPlayerComponent
-      ]
+      providers: [VideoPlayerComponent],
     });
 
     component = TestBed.inject(VideoPlayerComponent);

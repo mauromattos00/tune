@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 * {
   box-sizing: border-box;
@@ -9,8 +9,14 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-image: radial-gradient( circle at 50%,  $tune-color-primary-1 0.1%, $tune-color-primary-2 94.2% );
+  background-image: radial-gradient(
+    circle at 50%,
+    $tune-color-primary-1 0.1%,
+    $tune-color-primary-2 94.2%
+  );
 }
 
-html, body { height: 100%; }
-
+html,
+body {
+  height: 100%;
+}
