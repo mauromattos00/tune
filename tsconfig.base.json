@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@tune/tune-ui-styles": ["libs/tune-ui-styles/src/index.ts"],
       "@tune/tune-ui": ["libs/tune-ui/src/index.ts"],
+      "@tune/tune-ui-styles": ["libs/tune-ui-styles/src/index.ts"],
       "@tune/video-player": ["libs/video-player/src/index.ts"]
     }
   },

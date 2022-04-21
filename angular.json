@@ -97,11 +97,11 @@
           "options": {
             "jestConfig": "apps/tune/jest.config.js",
             "passWithNoTests": true,
-            "styles": [
-            ]
+            "styles": []
           }
         }
-      }
+      },
+      "tags": []
     },
     "tune-e2e": {
       "root": "apps/tune-e2e",
@@ -128,7 +128,9 @@
             "lintFilePatterns": ["apps/tune-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["tune"]
     },
     "tune-ui": {
       "root": "libs/tune-ui",
@@ -150,7 +152,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "tune-ui-styles": {
       "root": "libs/tune-ui-styles",
@@ -172,7 +175,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "video-player": {
       "root": "libs/video-player",
@@ -194,12 +198,9 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular",
-    "packageManager": "npm"
   },
   "schematics": {
     "@nrwl/angular": {
@@ -227,6 +228,5 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  },
-  "defaultProject": "tune"
+  }
 }

@@ -11,11 +11,10 @@ import { ButtonType } from './button-type.enum';
 @Directive({
   selector: 'button[tuneButton]',
   host: {
-    'class':'tune-button',
-  }
+    class: 'tune-button',
+  },
 })
 export class TuneButtonDirective {
-
   private _buttonType: 'primary' | 'secondary' | '' | undefined = undefined;
   @Input('tuneButton') set buttonType(type: 'primary' | 'secondary' | '') {
     if (type === '') {

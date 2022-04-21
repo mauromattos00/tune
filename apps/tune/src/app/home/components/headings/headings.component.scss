@@ -1,5 +1,5 @@
-@import "variables";
-@import "flexbox";
+@import 'variables';
+@import 'flexbox';
 
 .headings {
   @include column-center;
