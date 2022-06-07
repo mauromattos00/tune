@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/tune",
             "index": "apps/tune/src/index.html",
@@ -17,7 +19,10 @@
             "polyfills": "apps/tune/src/polyfills.ts",
             "tsConfig": "apps/tune/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
+            "assets": [
+              "apps/tune/src/favicon.ico",
+              "apps/tune/src/assets"
+            ],
             "styles": [
               "libs/tune-ui-styles/src/index.scss",
               "apps/tune/src/styles.scss"
@@ -93,7 +98,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/tune"],
+          "outputs": [
+            "coverage/apps/tune"
+          ],
           "options": {
             "jestConfig": "apps/tune/jest.config.js",
             "passWithNoTests": true,
@@ -123,14 +130,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/tune-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/tune-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["tune"]
+      "implicitDependencies": [
+        "tune"
+      ]
     },
     "tune-state": {
       "projectType": "library",
@@ -140,7 +153,9 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tune-state"],
+          "outputs": [
+            "coverage/libs/tune-state"
+          ],
           "options": {
             "jestConfig": "libs/tune-state/jest.config.ts",
             "passWithNoTests": true
@@ -165,14 +180,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/tune-ui/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/tune-ui/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tune-ui"],
+          "outputs": [
+            "coverage/libs/tune-ui"
+          ],
           "options": {
             "jestConfig": "libs/tune-ui/jest.config.js",
             "passWithNoTests": true
@@ -188,14 +209,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/tune-ui-styles/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/tune-ui-styles/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tune-ui-styles"],
+          "outputs": [
+            "coverage/libs/tune-ui-styles"
+          ],
           "options": {
             "jestConfig": "libs/tune-ui-styles/jest.config.js",
             "passWithNoTests": true
@@ -211,14 +238,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/video-player/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/video-player/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/video-player"],
+          "outputs": [
+            "coverage/libs/video-player"
+          ],
           "options": {
             "jestConfig": "libs/video-player/jest.config.js",
             "passWithNoTests": true
