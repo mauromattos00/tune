@@ -2,8 +2,3 @@
 @import './lib/components/button';
 @import './lib/helpers/flexbox';
 
-.app-wrapper {
-  @include column-center;
-  justify-content: center;
-  min-height: 100vh;
-}
