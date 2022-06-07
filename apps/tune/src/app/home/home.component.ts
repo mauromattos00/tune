@@ -15,8 +15,4 @@ export class HomeComponent {
   }
 
   constructor(private _videoPlayerService: VideoPlayerService) {}
-
-  public randomizeVideo() {
-    this._videoPlayerService.randomizeVideo();
-  }
 }
