@@ -23,6 +23,7 @@
     "@angular/router": "14.0.0",
     "@angular/youtube-player": "14.0.1",
     "@ngrx/store": "^13.2.0",
+    "@ngrx/store-devtools": "^13.2.0",
     "@nrwl/angular": "14.2.1",
     "@types/youtube-player": "^5.5.5",
     "rxjs": "~6.6.0",
