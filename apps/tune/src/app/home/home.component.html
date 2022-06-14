@@ -1,8 +1,10 @@
 <main class="home">
-  <section class="headings">
-    <h1 class="headings__title">TUNE</h1>
-    <h3>Random YouTube Background Music</h3>
-  </section>
+  <h2 class="video__author white-text" *ngIf="(videoData$ | async)?.author">
+    {{ (videoData$ | async)?.author }}
+  </h2>
+  <h3 class="video__title white-text">
+    {{ (videoData$ | async)?.title }}
+  </h3>
 
   <mauromattos00-video-player
     [videoId]="(videoId$ | async)!"

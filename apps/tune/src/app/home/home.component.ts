@@ -1,6 +1,7 @@
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { VideoPlayerFacadeService } from '@tune/tune-state';
+import { VideoData } from '@tune/video-player';
 
 @Component({
   selector: 'mauromattos00-home',
@@ -10,6 +11,7 @@ import { VideoPlayerFacadeService } from '@tune/tune-state';
 export class HomeComponent implements OnInit {
   videoId$!: Observable<string>;
   playerVars$!: Observable<YT.PlayerVars>;
+  videoData$!: Observable<VideoData | null>;
 
   constructor(private videoPlayerFacadeService: VideoPlayerFacadeService) { }
 
@@ -20,5 +22,6 @@ export class HomeComponent implements OnInit {
   private setComponentVars() {
     this.videoId$ = this.videoPlayerFacadeService.selectCurrentVideoId();
     this.playerVars$ = this.videoPlayerFacadeService.selectPlayerVars();
+    this.videoData$ = this.videoPlayerFacadeService.selectVideoData();
   }
 }
