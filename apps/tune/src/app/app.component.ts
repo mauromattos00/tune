@@ -10,12 +10,17 @@ export class AppComponent implements OnInit {
   constructor(private videoPlayerFacade: VideoPlayerFacadeService) { }
 
   ngOnInit(): void {
+    this.setInitialPlayerVars();
+    this.videoPlayerFacade.randomizeVideo();
+  }
+
+  private setInitialPlayerVars(): void {
     this.videoPlayerFacade.setPlayerVars({
       autoplay: 1,
       color: 'white',
       autohide: 1,
       controls: 1,
+      showinfo: 1,
     });
-    this.videoPlayerFacade.randomizeVideo();
   }
 }
