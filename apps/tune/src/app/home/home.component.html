@@ -5,10 +5,10 @@
   </section>
 
   <mauromattos00-video-player
-    [videoId]="videoId"
+    [videoId]="(videoId$ | async)!"
     [width]="480"
     [height]="640"
-    [playerVars]="playerVars"
+    [playerVars]="(playerVars$ | async)!"
     class="video-player"
   ></mauromattos00-video-player>
 

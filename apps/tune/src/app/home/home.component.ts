@@ -1,18 +1,24 @@
-import { Component } from '@angular/core';
-import { VideoPlayerService } from '@tune/video-player';
+import { Observable, of } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { VideoPlayerFacadeService } from '@tune/tune-state';
 
 @Component({
   selector: 'mauromattos00-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-  get videoId(): string | undefined {
-    return this._videoPlayerService.videoId;
-  }
-  get playerVars(): YT.PlayerVars | undefined {
-    return this._videoPlayerService.playerVars;
+export class HomeComponent implements OnInit {
+  videoId$!: Observable<string>;
+  playerVars$!: Observable<YT.PlayerVars>;
+
+  constructor(private videoPlayerFacadeService: VideoPlayerFacadeService) { }
+
+  ngOnInit(): void {
+    this.setComponentVars();
   }
 
-  constructor(private _videoPlayerService: VideoPlayerService) {}
+  private setComponentVars() {
+    this.videoId$ = this.videoPlayerFacadeService.selectCurrentVideoId();
+    this.playerVars$ = this.videoPlayerFacadeService.selectPlayerVars();
+  }
 }
