@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/tune",
       "sourceRoot": "apps/tune/src",
-      "prefix": "mauromattos00",
+      "prefix": "tune",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
