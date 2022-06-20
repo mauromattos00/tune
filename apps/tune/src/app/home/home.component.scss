@@ -12,7 +12,9 @@
 }
 
 .home {
-  @include column-center;
+  width: 70vw;
+  margin: auto;
+  justify-self: center;
 }
 
 .video-player {
