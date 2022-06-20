@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { VideoPlayerFacadeService } from '@tune/tune-state';
 import {  Observable } from 'rxjs';
 
-import { videoIdList } from 'video-ids';
+import { winter } from 'video-ids';
 import { VideoData } from '../interfaces/video-data';
 
 @Injectable()
@@ -14,8 +14,8 @@ export class VideoPlayerService {
   }
 
   public randomizeVideo() {
-    const newVideoId = videoIdList[
-      Math.floor(Math.random() * videoIdList.length)
+    const newVideoId = winter[
+      Math.floor(Math.random() * winter.length)
     ];
     this.videoPlayerFacade.setVideoId(newVideoId);
   }
