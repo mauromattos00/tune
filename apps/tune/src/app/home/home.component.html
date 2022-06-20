@@ -1,10 +1,7 @@
 <main class="home">
-  <h2 class="video__author white-text" *ngIf="(videoData$ | async)?.author">
-    {{ (videoData$ | async)?.author }}
-  </h2>
-  <h3 class="video__title white-text">
-    {{ (videoData$ | async)?.title }}
-  </h3>
+  <section class="top-bar">
+    <img src="../../assets/tune-logo.svg" alt="Tune Logo">
+  </section>
 
   <mauromattos00-video-player
     [videoId]="(videoId$ | async)!"
