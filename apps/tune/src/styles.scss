@@ -6,14 +6,9 @@
   margin: 0;
 }
 
-body {
-  margin: 0;
-  font-family: 'Source Sans', sans-serif;
-  background-image: radial-gradient(
-    circle at 50%,
-    $tune-color-primary-1 0.1%,
-    $tune-color-primary-2 94.2%
-  );
+html {
+  background: url("./assets/dark-mode-background.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
 body {
