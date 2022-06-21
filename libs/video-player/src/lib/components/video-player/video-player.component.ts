@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { VideoPlayerService } from '../../services/video-player.service';
 
 @Component({
-  selector: 'mauromattos00-video-player',
+  selector: 'tune-video-player',
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.scss'],
 })

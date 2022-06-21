@@ -4,7 +4,7 @@ import { VideoPlayerFacadeService } from '@tune/tune-state';
 import { VideoData } from '@tune/video-player';
 
 @Component({
-  selector: 'mauromattos00-home',
+  selector: 'tune-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

@@ -3,13 +3,13 @@
     <img src="../../assets/tune-logo.svg" alt="Tune Logo">
   </section>
 
-  <mauromattos00-video-player
+  <tune-video-player
     [videoId]="(videoId$ | async)!"
     [width]="480"
     [height]="640"
     [playerVars]="(playerVars$ | async)!"
     class="video-player"
-  ></mauromattos00-video-player>
+  ></tune-video-player>
 
   <button
     tuneButton="primary"
