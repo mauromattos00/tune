@@ -11,7 +11,7 @@ import { VideoData } from '@tune/video-player';
 export class HomeComponent implements OnInit {
   videoId$!: Observable<string>;
   playerVars$!: Observable<YT.PlayerVars>;
-  videoData$!: Observable<VideoData | null>;
+  videoHeadings$!: Observable<VideoData | null>;
 
   constructor(private videoPlayerFacadeService: VideoPlayerFacadeService) { }
 
@@ -22,6 +22,6 @@ export class HomeComponent implements OnInit {
   private setComponentVars() {
     this.videoId$ = this.videoPlayerFacadeService.selectCurrentVideoId();
     this.playerVars$ = this.videoPlayerFacadeService.selectPlayerVars();
-    this.videoData$ = this.videoPlayerFacadeService.selectVideoData();
+    this.videoHeadings$ = this.videoPlayerFacadeService.selectVideoData();
   }
 }

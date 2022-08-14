@@ -2,38 +2,24 @@
 @import 'flexbox';
 
 .headings {
-  @include column-center;
-  color: $tune-white;
-  margin: 1.5rem 0;
-
-  &__title {
-    text-shadow: 0 2px 2px #666;
-  }
+  margin-bottom: 1.5rem;
 }
 
 .home {
-  width: 70vw;
+  width: 55vw;
   margin: auto;
   justify-self: center;
 }
 
-.video-player {
-  margin-bottom: 2rem;
+.video-player-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.video {
-  &__author {
-    margin-top: 1.5rem;
-  }
-
-  &__title {
-    margin: 1.5rem 0;
-    text-shadow: 0 2px 2px #666;
-  }
-}
-
-.white-text {
-  color: $tune-white;
+.button-next-video {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .top-bar {
