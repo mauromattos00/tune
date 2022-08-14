@@ -1,16 +1,23 @@
 @import 'variables';
 
 .tune-button {
-  padding: 1rem;
   border: none;
-  border-radius: 2px;
+  border-radius: 3px;
   font-weight: $font-weight-bold;
   cursor: pointer;
-  width: 480px;
 
   &--primary {
-    background-color: $tune-white;
-    color: $tune-color-primary-1;
+    background-color: $tune-color-primary-1;
+    box-shadow: 0 2px 2px #15181E;
+    color: $tune-white;
+
+    &:hover {
+      box-shadow: 0 4px 4px #15181E;
+    }
+
+    &:active {
+      box-shadow: 0 2px 2px #15181E;
+    }
   }
 
   &--secondary {
