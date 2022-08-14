@@ -1,9 +1,39 @@
+@import 'variables';
 @import 'flexbox';
 
+.headings {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5.5rem;
+}
+
 .home {
-  @include column-center;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.video-player-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.6rem;
 }
 
 .video-player {
-  margin-bottom: 2rem;
+  margin-right: 1rem;
+}
+
+.button-next-video {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.top-bar {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+
+  & > img {
+    height: 50px;
+  }
 }

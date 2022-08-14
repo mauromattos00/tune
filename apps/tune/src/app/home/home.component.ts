@@ -1,22 +1,27 @@
-import { Component } from '@angular/core';
-import { VideoPlayerService } from '@tune/video-player';
+import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { VideoPlayerFacadeService } from '@tune/tune-state';
+import { VideoData } from '@tune/video-player';
 
 @Component({
-  selector: 'mauromattos00-home',
+  selector: 'tune-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
-  get videoId(): string | undefined {
-    return this._videoPlayerService.videoId;
-  }
-  get playerVars(): YT.PlayerVars | undefined {
-    return this._videoPlayerService.playerVars;
+export class HomeComponent implements OnInit {
+  videoId$!: Observable<string>;
+  playerVars$!: Observable<YT.PlayerVars>;
+  videoHeadings$!: Observable<VideoData | null>;
+
+  constructor(private videoPlayerFacadeService: VideoPlayerFacadeService) { }
+
+  ngOnInit(): void {
+    this.setComponentVars();
   }
 
-  constructor(private _videoPlayerService: VideoPlayerService) {}
-
-  public randomizeVideo() {
-    this._videoPlayerService.randomizeVideo();
+  private setComponentVars() {
+    this.videoId$ = this.videoPlayerFacadeService.selectCurrentVideoId();
+    this.playerVars$ = this.videoPlayerFacadeService.selectPlayerVars();
+    this.videoHeadings$ = this.videoPlayerFacadeService.selectVideoData();
   }
 }

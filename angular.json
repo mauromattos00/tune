@@ -5,11 +5,13 @@
       "projectType": "application",
       "root": "apps/tune",
       "sourceRoot": "apps/tune/src",
-      "prefix": "mauromattos00",
+      "prefix": "tune",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/tune",
             "index": "apps/tune/src/index.html",
@@ -17,7 +19,10 @@
             "polyfills": "apps/tune/src/polyfills.ts",
             "tsConfig": "apps/tune/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/tune/src/favicon.ico", "apps/tune/src/assets"],
+            "assets": [
+              "apps/tune/src/favicon.ico",
+              "apps/tune/src/assets"
+            ],
             "styles": [
               "libs/tune-ui-styles/src/index.scss",
               "apps/tune/src/styles.scss"
@@ -93,7 +98,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/tune"],
+          "outputs": [
+            "coverage/apps/tune"
+          ],
           "options": {
             "jestConfig": "apps/tune/jest.config.js",
             "passWithNoTests": true,
@@ -103,35 +110,6 @@
       },
       "tags": []
     },
-    "tune-e2e": {
-      "root": "apps/tune-e2e",
-      "sourceRoot": "apps/tune-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/tune-e2e/cypress.json",
-            "devServerTarget": "tune:serve:development",
-            "tsConfig": "apps/tune-e2e/tsconfig.json"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "tune:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["apps/tune-e2e/**/*.{js,ts}"]
-          }
-        }
-      },
-      "tags": [],
-      "implicitDependencies": ["tune"]
-    },
     "tune-ui": {
       "root": "libs/tune-ui",
       "sourceRoot": "libs/tune-ui/src",
@@ -139,14 +117,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/tune-ui/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/tune-ui/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tune-ui"],
+          "outputs": [
+            "coverage/libs/tune-ui"
+          ],
           "options": {
             "jestConfig": "libs/tune-ui/jest.config.js",
             "passWithNoTests": true
@@ -162,14 +146,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/tune-ui-styles/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/tune-ui-styles/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/tune-ui-styles"],
+          "outputs": [
+            "coverage/libs/tune-ui-styles"
+          ],
           "options": {
             "jestConfig": "libs/tune-ui-styles/jest.config.js",
             "passWithNoTests": true
@@ -185,14 +175,20 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/video-player/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/video-player/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/video-player"],
+          "outputs": [
+            "coverage/libs/video-player"
+          ],
           "options": {
             "jestConfig": "libs/video-player/jest.config.js",
             "passWithNoTests": true
@@ -200,33 +196,6 @@
         }
       },
       "tags": []
-    }
-  },
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
     }
   }
 }

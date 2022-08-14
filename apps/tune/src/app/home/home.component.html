@@ -1,13 +1,30 @@
 <main class="home">
-  <tune-headings></tune-headings>
+  <section class="top-bar">
+    <img src="../../assets/tune-logo.svg" alt="Tune Logo">
+  </section>
 
-  <mauromattos00-video-player
-    [videoId]="videoId"
-    [width]="480"
-    [height]="640"
-    [playerVars]="playerVars"
-    class="video-player"
-  ></mauromattos00-video-player>
+  <div class="headings">
+    <h2 class="tune-video-title">
+      {{ (videoHeadings$ | async)?.title }}
+    </h2>
+    <h3 class="tune-video-author">
+      {{ (videoHeadings$ | async)?.author }}
+    </h3>
+  </div>
 
-  <button tuneButton="primary" (clicked)="randomizeVideo()">Randomizar</button>
+  <div class="video-player-wrapper">
+    <tune-video-player
+      [videoId]="(videoId$ | async)!"
+      [width]="350"
+      [height]="670"
+      [playerVars]="(playerVars$ | async)!"
+      class="video-player"
+    ></tune-video-player>
+    <button tuneButton="primary" class="button-next-video" tuneRandomizeVideo>
+      <img
+        src="../../assets/chevron-right.png"
+        alt="Chevron Right"
+      >
+    </button>
+  </div>
 </main>
