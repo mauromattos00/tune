@@ -2,18 +2,24 @@
 @import 'flexbox';
 
 .headings {
-  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5.5rem;
 }
 
 .home {
-  width: 55vw;
-  margin: auto;
-  justify-self: center;
+  width: 900px;
+  margin: 0 auto;
 }
 
 .video-player-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  padding-top: 1.6rem;
+}
+
+.video-player {
+  margin-right: 1rem;
 }
 
 .button-next-video {
