@@ -88,7 +88,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "builder": "@nx/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/tune/src/**/*.ts",
@@ -97,7 +97,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "@nx/jest:jest",
           "outputs": [
             "coverage/apps/tune"
           ],
@@ -116,7 +116,7 @@
       "projectType": "library",
       "architect": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "builder": "@nx/linter:eslint",
           "outputs": [
             "{options.outputFile}"
           ],
@@ -127,7 +127,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "@nx/jest:jest",
           "outputs": [
             "coverage/libs/tune-ui"
           ],
@@ -145,7 +145,7 @@
       "projectType": "library",
       "architect": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "builder": "@nx/linter:eslint",
           "outputs": [
             "{options.outputFile}"
           ],
@@ -156,7 +156,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "@nx/jest:jest",
           "outputs": [
             "coverage/libs/tune-ui-styles"
           ],
@@ -174,7 +174,7 @@
       "projectType": "library",
       "architect": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "builder": "@nx/linter:eslint",
           "outputs": [
             "{options.outputFile}"
           ],
@@ -185,7 +185,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "@nx/jest:jest",
           "outputs": [
             "coverage/libs/video-player"
           ],
